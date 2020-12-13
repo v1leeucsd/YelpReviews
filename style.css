@@ -1,0 +1,105 @@
+* {
+    font-family: Montserrat, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2em;
+}
+
+p, h1, h2, h3 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+p {
+    font-size: larger;
+}
+
+.col-grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    text-align: center;
+    margin-left: 5%;
+    height: 75%;
+}
+
+#bar-add {
+    background: rgb(28, 184, 65);
+    color: white;
+}
+
+#bar-remove {
+    background: #D32323;
+    color: white;
+}
+
+#toggle-percent {
+    float: right;
+}
+
+.figure {
+    float: center;
+}
+
+#pict-rect {
+    fill:#fff1e0;   
+}
+
+.iconPlain {
+    fill:#a7a59b;   
+}
+
+.iconSelected {
+    fill:#D32323;   
+}
+
+#picto-svg {
+    overflow:none;
+    padding:10px;
+    float:center;
+    width:400px;
+    height:400px;
+}
+/*table */
+#table {
+    margin-left: 20%;
+}
+
+#tablecontainer {
+    height:318px;
+    width:55vw;
+    overflow-y: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width:100%;
+    overflow-x: scroll;
+}
+th {
+    top:0;
+    position: sticky;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #FF0000;
+    color: white;
+}
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:hover {background-color: #ddd;}
+
+

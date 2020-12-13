@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Las Vegas Restaurants</title>
+        <link rel="icon" href="./data/foodtruck.png" type="image/icon type">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat%7CPaytone+One&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+    </head>
+    <body>
+        <h2><i class="fa fa-yelp" style="font-size:48px;color:red"></i> Las Vegas Restaurants</h2>
+        <h3>There may be a large market for food trucks in Las Vegas</h3>
+        <p>Buisness Owners in Las Vegas have catered to the demand of vacationers/tourists, 
+            as Las Vegas has had a reputation built upon its quality bars, fine dining restaurants, buffets, and desserts. Fast food is also very common
+            within las vegas because the marketing teams of these food chains have stategically placed chains within high foot traffic/population. 
+            Though we see a small amount of food truck restaurants, consumers have enjoyed food trucks the most out of all other categories within Las Vegas.
+        </p>
+        <hr>
+        <section class='col-grid'>
+            <figure>
+                <div id='picto-chart'></div>
+            </figure>
+            <figure>
+                <div id='pie-chart'></div>
+            </figure>
+        </section>
+        <p> Though there exists a small amount of food trucks within Las Vegas as shown in the pie chart,
+            we see that the consumers who have went to these food trucks have enjoyed their experience a lot. We see this through 
+            the pictogram where it shows that 81% of users rated food trucks with a yelp review rating of four or five. Though market is small 
+            for food trucks, an enjoyable experience seems to appear fairly frequently.
+        </p>
+        <hr>
+        <figure>
+            <div id='col-chart'></div>
+            <button id="bar-remove" class="pure-button" onclick="removeCategory(); return false;" type="submit">Remove Category</button>
+            <button id="bar-add" class="pure-button" onclick="addCategory(); return false;" type="submit">Add Category</button>
+            <select name="categories" id="category-dropdown">
+                <option value="">None</option>
+                <option value="Fast Food">Fast Food</option>
+                <option value="Bars">Bars</option>
+                <option value="Desserts">Desserts</option>
+                <option value="Steakhouses">Steakhouses</option>
+                <option value="Buffets">Buffets</option>
+                <option value="Food Trucks">Food Trucks</option>
+            </select>
+            <button id="toggle-percent" class="pure-button" onclick="togglePercent(); return false;" type="button">Toggle Percentage</button>
+        </figure>
+        <p>Vizualized above, we observe the count of each rating across all Food Trucks in Las Vegas, if you were to add any other category in the column chart
+            we can clearly see the size of five star ratings being a lot greater than the size of all other ratings. 
+            When comparing with other categories using the buttons above the chart, we do see all the other categories have a much higher <b>count</b> 
+            of total ratings, but we also see all other categories have a lower <b>percentage</b> of five star ratings 
+            (use toggle percent button to see this). This shows that though there are more ratings given for other categories, indicating a lot more customers,
+            but consumers have enjoyed food trucks a higher percentage of times than any other categories. This shows there is a bit of an untapped market 
+            for food trucks in Las Vegas. Since there is a lot of tourist foot traffic there could be a large market.
+        </p>
+        <hr>
+        <figure id=table>
+            <div id = "tablecontainer">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Restuarant Name</th>
+                            <th>Rating</th>
+                            <th>Review Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div id="buttons">
+                <select name="category" id = 'categoryselect'> 
+                    <option value="Food Trucks" selected>Food Trucks</option>
+                    <option value="Buffets">Buffets</option> 
+                    <option value="Steakhouses">Steak Houses </option> 
+                    <option value="Bars">Bars</option> 
+                    <option value="Fast Food">Fast Foods</option> 
+                    <option value="Desserts">Desserts</option> 
+                </select> 
+                <select name="sort" id = 'sortingselect'> 
+                    <option value="descending" selected>Descending</option> 
+                    <option value="ascending">Ascending</option>
+                </select>
+                <select name="sortby" id = 'sortbyselect'> 
+                    <option value="ratings" selected>Ratings</option> 
+                    <option value="reviewcount">Review Count</option>
+                </select>
+            </div>
+            <figcaption>Use the dropdowns to look into each category and see which restaurants are among the best rated in las vegas!</figcaption>
+        </figure>
+    <script src="graphs.js"></script>
+    </body>
+    <footer>
+        <button id="toggle-font" class="pure-button" onclick="toggleFont(); return false;" type="button">Toggle Readability</button>
+    </footer>
+</html>
